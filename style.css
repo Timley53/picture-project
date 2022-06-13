@@ -77,6 +77,7 @@ justify-content: space-between;
     border: none;
     border-radius: 15px;
     background-color: transparent;
+    cursor: pointer;
     
 }
 
@@ -164,7 +165,7 @@ justify-content: space-between;
     /* transition: transform .7s; */
     animation-name: slide-1;
     animation-duration: 4s;
-    animation-delay: 1s;
+    animation-delay: .3s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -186,12 +187,16 @@ justify-content: space-between;
     content: '';
     position: absolute;
     right: 15px;
-    top: 150px;
+    top: 200px;
     width: 20px;
     height: 20px;
     border-right: 4px solid red ;
     border-top: 4px solid red;
     transform: rotateZ(40deg);
+}
+.slide-1:hover::after {
+   border: none;
+    transition: all .5s;
 }
 
 .slide-2{
@@ -209,7 +214,7 @@ box-shadow: 6px 12px 4px rgba(0, 0, 0, 0.616);
     /* transition: transform .7s; */
     animation-name: slide-2;
     animation-duration: 4s;
-    animation-delay: 1s;
+    animation-delay: 0.3s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -231,13 +236,18 @@ box-shadow: 6px 12px 4px rgba(0, 0, 0, 0.616);
     content: '';
     position: absolute;
     right: 15px;
-    top: 150px;
+    top: 200px;
     width: 20px;
     height: 20px;
     border-right: 4px solid red ;
     border-top: 4px solid red;
     transform: rotateZ(40deg);
 }
+.slide-2:hover::after {
+   border: none;
+    transition: all .5s;
+}
+
 .slide-3{
     margin-top: -40px;
     position: relative;
@@ -253,7 +263,7 @@ box-shadow: 6px 12px 4px rgba(0, 0, 0, 0.616);
     /* transition: transform .7s; */
     animation-name: slide-3;
     animation-duration: 4s;
-    animation-delay: 1s;
+    animation-delay: .3s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -275,7 +285,7 @@ box-shadow: 6px 12px 4px rgba(0, 0, 0, 0.616);
     content: '';
     position: absolute;
     right: 15px;
-    top: 150px;
+    top: 200px;
     width: 20px;
     height: 20px;
     border-right: 4px solid red ;
@@ -283,3 +293,83 @@ box-shadow: 6px 12px 4px rgba(0, 0, 0, 0.616);
     transform: rotateZ(40deg);
 }
 
+.slide-3:hover::after{
+    border: none;
+        transition: all .5s;
+}
+
+.grid-item-3{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.idea-q{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 80%;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.247);
+    
+    
+}
+
+.idea-q img{
+    width: 30%;
+    height: ;
+    
+    
+}
+
+.q-a{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 100%;
+    background-color: lemonchiffon;
+    overflow: hidden;
+    font: 1.1em ;
+    
+}
+
+.question{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    
+    width:100% ;
+    height: 420px;
+    position: absolute;
+    transition: all 1s;
+    
+}
+
+.question p{
+    margin-top:300px;
+    margin-left:450px;
+}
+
+.answer{
+    margin: 50px;
+    width: 100%;
+        height: 500px;
+        position: absolute;
+    transform: translateX(100%);
+        transition: all 2s;
+}
+
+.answer h3{
+width: 80%;
+}
+
+.q-a:hover .answer{
+    transform: translateX(0);
+}
+
+.q-a:hover .question{
+    transform: translateX(-100%);
+}
